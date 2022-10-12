@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS wellness_db;
+CREATE DATABASE wellness_db;
