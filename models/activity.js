@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Sleep extends Model {}
+class Activity extends Model {}
 
-  Sleep.init(
+  Activity.init(
     {
       id: {
         type: DataTypes.INTEGER,
@@ -11,22 +11,27 @@ class Sleep extends Model {}
         primaryKey: true,
         autoIncrement: true,
       },
-      hours: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-      },
-      quality: {
+      exercise: {
         type: DataTypes.STRING,
         allowNull: false,
       },
+      effort: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+      },
+
+      goals:
+      {
+        type: DataTypes.STRING,
+        allowNull: true,
+      }
     },
     {
       sequelize,
       freezeTableName: true,
       underscored: true,
-      modelName: 'sleep',
+      modelName: 'activity',
     }
   );
   
-  module.exports = Sleep;
-  
+  module.exports = Activity;
