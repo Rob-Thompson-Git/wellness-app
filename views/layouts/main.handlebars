@@ -20,7 +20,7 @@
     <button id="logout" class="btn-no-style">Logout</button>
     {{else}}
     <!-- Otherwise, show a link to login -->
-    <a href="/Develop/public/js/login.js">Login</a>
+    <a href="/public/js/login.js">Login</a>
     {{/if}}
   </nav>
   <main>
@@ -33,7 +33,7 @@
   </main>
   <!-- If the user is logged in, load the JS script for when they logout -->
   {{#if loggedIn}}
-  <script src="/Develop/public/js/logout.js"></script>
+  <script src="/public/js/logout.js"></script>
   {{/if}}
 </body>
 
