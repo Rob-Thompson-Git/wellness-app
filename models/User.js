@@ -1,3 +1,5 @@
+// This code is from module 14.28 mini project
+
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
