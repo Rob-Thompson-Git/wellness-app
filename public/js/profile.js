@@ -1,14 +1,14 @@
 // const newFormHandler = async (event) => {
 //   event.preventDefault();
 
-//   const name = document.querySelector('#project-name').value.trim();
-//   const needed_funding = document.querySelector('#project-funding').value.trim();
-//   const description = document.querySelector('#project-desc').value.trim();
+//   const sleep = document.querySelector('#sleep').value.trim();
+//   const mood = document.querySelector('#mood').value.trim();
+//   const activity = document.querySelector('#activity').value.trim();
 
-//   if (name && needed_funding && description) {
-//     const response = await fetch(`/api/projects`, {
+//   if (sleep && mood && activity) {
+//     const response = await fetch(`/api/user`, {
 //       method: 'POST',
-//       body: JSON.stringify({ name, needed_funding, description }),
+//       body: JSON.stringify({sleep, mood, activity }),
 //       headers: {
 //         'Content-Type': 'application/json',
 //       },
@@ -26,7 +26,7 @@
 //   if (event.target.hasAttribute('data-id')) {
 //     const id = event.target.getAttribute('data-id');
 
-//     const response = await fetch(`/api/projects/${id}`, {
+//     const response = await fetch(`/api/user/${id}`, {
 //       method: 'DELETE',
 //     });
 
@@ -39,9 +39,9 @@
 // };
 
 // document
-//   .querySelector('.new-project-form')
+//   .querySelector('.new-user-form')
 //   .addEventListener('submit', newFormHandler);
 
 // document
-//   .querySelector('.project-list')
+//   .querySelector('.wellness')
 //   .addEventListener('click', delButtonHandler);
