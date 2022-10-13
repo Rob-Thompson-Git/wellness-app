@@ -6,10 +6,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wellness App</title>
-  <link rel="stylesheet" href="css/uikit.min.css" />
-  <script src="js/uikit.min.js"></script>
-  <script src="js/uikit-icons.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.10/dist/css/uikit.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.10/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.10/dist/js/uikit-icons.min.js"></script>
+  {{!-- <link rel="stylesheet" href="css/uikit.min.css" /> --}}
+  {{!-- <script src="js/uikit.min.js"></script>
+  <script src="js/uikit-icons.min.js"></script> --}}
   <link rel="stylesheet" href="/css/style.css">
+  {{!-- <link rel="stylesheet" href="/css/homepage.css"> --}}
+
 </head>
 
 <body>
@@ -23,14 +28,11 @@
     <button id="logout" class="btn-no-style">Logout</button>
     {{else}}
     <!-- Otherwise, show a link to login -->
-    <a href="/public/js/login.js">Login</a>
+    <a href="/login">Login</a>
     {{/if}}
   </nav>
   <main>
-    <aside>
-      <h2>Enjoy the galleries!</h2>
-    </aside>
-    <div class="gallery">
+    <div>
       {{{body}}}
     </div>
   </main>
@@ -39,7 +41,5 @@
   <script src="/public/js/logout.js"></script>
   {{/if}}
 </body>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.10/dist/css/uikit.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/uikit@3.15.10/dist/js/uikit.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/uikit@3.15.10/dist/js/uikit-icons.min.js"></script>
+
 </html>
