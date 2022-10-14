@@ -38,8 +38,8 @@ const signupFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      alert("Ssignup success");
-      document.location.replace('/');
+      alert("Signup success");
+      document.location.replace('/homepage');
     } else {
       alert(response.statusText);
     }
