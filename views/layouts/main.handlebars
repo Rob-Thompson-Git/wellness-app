@@ -9,18 +9,15 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.10/dist/css/uikit.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.10/dist/js/uikit.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.10/dist/js/uikit-icons.min.js"></script>
-  {{!-- <link rel="stylesheet" href="css/uikit.min.css" /> --}}
-  {{!-- <script src="js/uikit.min.js"></script>
-  <script src="js/uikit-icons.min.js"></script> --}}
   <link rel="stylesheet" href="/css/style.css">
-  {{!-- <link rel="stylesheet" href="/css/homepage.css"> --}}
-
 </head>
 
 <body>
   <header>
-    <h1>Start your wellness journey now!</h1>
+    <h1 class="uk-heading-line uk-heading-medium uk-text-center"><span>Wellness App</span></h1>
   </header>
+
+
   <nav>
     <a href="/">Home</a>
     <!-- If the user is logged in, show a logout button -->
@@ -31,6 +28,7 @@
     <a href="/login">Login</a>
     {{/if}}
   </nav>
+  
   <main>
     <div>
       {{{body}}}
@@ -38,7 +36,7 @@
   </main>
   <!-- If the user is logged in, load the JS script for when they logout -->
   {{#if loggedIn}}
-  <script src="/public/js/logout.js"></script>
+  <script src="/js/logout.js"></script>
   {{/if}}
 </body>
 
