@@ -1,6 +1,5 @@
 const router = require('express').Router();
-const { Activity, Mood, Sleep, User,Water } = require('../models');
-const {User} = require('../models');
+const { Activity, Mood, Sleep, User, Water } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', (req,res) => {
