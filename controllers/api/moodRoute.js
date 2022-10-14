@@ -1,18 +1,30 @@
 const router = require('express').Router();
+const { User } = require('../../models');
 const sequelize = require('../../config/connection');
-const { Sleep } = require('../../models');
 const { Mood } = require('../../models/mood');
 
-// The api/sleep endpoint
 
-router.get('/.id', (req,res) => {
+// The api/mood endpoint
+
+router.get('/mood/:id', async (req, res) => {
   // get mood for user
-  Mood.findOne({
-    attributes: [
-     "mood_overall",
-    ],
-    where: {
-      id: req.params.id
-    },
-   })
-})
+try {
+  const moodData = await Mood.findByPK(req.params.id, {
+    // include: [
+    //   {
+    //     model: User,
+    //     attributes: ['name'],
+    //   },
+    // ],
+  });
+  const mood = moodData.get({plain: true});
+  res.render('mood', {
+    ...mood, 
+    logged_in: req.session.logged_in
+  });
+
+} catch (err) {
+  res.status(500).json(err);
+}
+});
+module.exports = router;
