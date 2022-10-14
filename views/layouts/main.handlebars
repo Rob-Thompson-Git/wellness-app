@@ -21,7 +21,7 @@
   <nav>
     <a href="/">Home</a>
     <!-- If the user is logged in, show a logout button -->
-    {{#if loggedIn}}
+    {{#if logged_in}}
     <button id="logout" class="btn-no-style">Logout</button>
     {{else}}
     <!-- Otherwise, show a link to login -->
@@ -35,7 +35,7 @@
     </div>
   </main>
   <!-- If the user is logged in, load the JS script for when they logout -->
-  {{#if loggedIn}}
+  {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
 </body>
