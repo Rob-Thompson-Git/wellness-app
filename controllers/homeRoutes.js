@@ -1,9 +1,10 @@
 const router = require('express').Router();
-const {User} = require('../models');
+const { Activity, Mood, Sleep, User,Water } = require('../models');
 
 router.get('/', (req,res) => {
     res.render('homepage')
 })
+
 router.get('/login', (req,res) => {
     if(req.session.logged_in) {
         res.redirect('/homepage');
@@ -11,5 +12,6 @@ router.get('/login', (req,res) => {
     }
     res.render('login-page');
 })
+
 
 module.exports = router;
