@@ -4,7 +4,11 @@ router.get('/', (req,res) => {
     res.render('homepage')
 })
 router.get('/login', (req,res) => {
-    res.render('landing-page')
+    if(req.session.logged_in) {
+        res.redirect('/homepage');
+        return;
+    }
+    res.render('login-page');
 })
 
 module.exports = router;

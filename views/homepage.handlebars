@@ -1,7 +1,35 @@
 {{!-- profile with all questions --}}
-     <div class="context">
-        <h1>Jane Doe</h1>
+{{!-- thinking of using marker or off-canvas uikit? --}}
+{{!-- questions to ask: Do we need a local storage for to-do list? --}}
+
+
+{{!-- to do list to be put INSIDE card? --}}
+<div>
+        <ul class="uk-list uk-list-large uk-list-disc">
+            <li>Workout 7am</li>
+            <li>Lunch at noon</li>
+            <li>Walk puppy</li>
+        </ul>
+</div>
+
+{{!-- models/questions/water intake/sleep etc EXAMPLE BUT NEED TO SWITCH TO CARD --}}
+<div class="uk-background-muted uk-height-large">
+
+    <div class="uk-child-width-1-4@s" uk-grid>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body uk-text-center uk-position-z-index" uk-sticky="start: 200; end: !.uk-height-large; offset: 80">Did you drink water today?</div>
+        </div>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body uk-text-center uk-position-z-index" uk-sticky="start: 100%; end: !.uk-height-large; offset: 80">Did you sleep well?</div>
+        </div>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body uk-text-center uk-position-z-index" uk-sticky="start: 20vh; end: !.uk-height-large; offset: 80">How are you feeling?</div>
+        </div>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body uk-text-center uk-position-z-index" uk-sticky="start: !.uk-height-large; end: !.uk-height-large + div; offset: 80">To do list:</div>
+        </div>
     </div>
-<div class="area" >
-        
-    </div >
+
+</div>
+<div style="height: 200px"></div>
+
