@@ -1,43 +1,59 @@
 const router = require('express').Router();
 const { User } = require('../../models');
-const sequelize = require('../../config/connection');
-const { Mood } = require('../../models/mood');
+// const sequelize = require('../../config/connection');
+const { Mood } = require('../../models');
 
 // The api/mood endpoint
-
 router.get('/mood/:id', async (req, res) => {
-  // get mood for user
-try {
-  const moodData = await Mood.findByPK(req.params.id, {
-    include: [
-      {
-        model: User,
-        attributes: ['name'],
-      },
-    ],
-  });
-  const mood = moodData.get({plain: true});
-  res.render('mood', {
-    ...mood, 
-    logged_in: req.session.logged_in
-  });
+  try {
+    const moodData = await Mood.findOne({ where: { id: req.params.id} });
+        res.status(200).json(moodData)
+  }
+  catch (err){
+  res.status(400).json(err)
+  }
+})
 
-} catch (err) {
-  res.status(500).json(err);
-}
+
+router.get('/all', async (req, res) => {
+  try {
+    const moodData = await Mood.findAll();
+        res.status(200).json(moodData)
+  }
+  catch (err){
+  res.status(400).json(err)
+  }
+})
+
+
+router.post('/', async (req, res) => {
+  console.log(req.body);
+  try {
+    const moodData = await Mood.create(req.body);
+
+    req.session.save(() => {
+      req.session.user_id = moodData.id;
+      req.session.logged_in = true;
+
+      res.status(200).json({success: true, "result": moodData});
+    });
+  } catch (err) {
+    res.status(400).json(err);
+  }
 });
 
-router.post('/', async (req,res) => {
+router.delete('/mood/:id', async (req, res) => {
   try {
-    const moodData = await Mood.create({
-      mood_overall: req.body.mood_overall,
-      anxiety: req.body.anxiety,
-      happiness: req.body.happiness,
-      chill: req.body.chill,
+    const moodData = await Mood.destroy({
+      where: {
+        id: req.params.id
+        // user_id: req.session.user_id,
+      },
     });
-    res.status(200).json(moodData)
+
+    res.status(200).json(moodData);
   } catch (err) {
-    res.status(400).json (err);
+    res.status(500).json(err);
   }
 });
 module.exports = router;
