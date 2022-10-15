@@ -10,12 +10,12 @@ router.get('/mood/:id', async (req, res) => {
   // get mood for user
 try {
   const moodData = await Mood.findByPK(req.params.id, {
-    // include: [
-    //   {
-    //     model: User,
-    //     attributes: ['name'],
-    //   },
-    // ],
+    include: [
+      {
+        model: User,
+        attributes: ['name'],
+      },
+    ],
   });
   const mood = moodData.get({plain: true});
   res.render('mood', {
