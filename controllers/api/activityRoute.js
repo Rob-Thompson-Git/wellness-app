@@ -1,13 +1,13 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 // const sequelize = require('../../config/connection');
-const { Mood } = require('../../models');
+const { Activity } = require('../../models');
 
-// The api/mood endpoint
-router.get('/mood/:id', async (req, res) => {
+// The api/activity endpoint
+router.get('/activity/:id', async (req, res) => {
   try {
-    const moodData = await Mood.findOne({ where: { id: req.params.id} });
-        res.status(200).json(moodData)
+    const activityData = await Activity.findOne({ where: { id: req.params.id} });
+        res.status(200).json(activityData)
   }
   catch (err){
   res.status(400).json(err)
@@ -17,8 +17,8 @@ router.get('/mood/:id', async (req, res) => {
 
 router.get('/all', async (req, res) => {
   try {
-    const moodData = await Mood.findAll();
-        res.status(200).json(moodData)
+    const activityData = await Activity.findAll();
+        res.status(200).json(activityData)
   }
   catch (err){
   res.status(400).json(err)
@@ -29,29 +29,29 @@ router.get('/all', async (req, res) => {
 router.post('/', async (req, res) => {
   console.log(req.body);
   try {
-    const moodData = await Mood.create(req.body);
+    const activityData = await Activity.create(req.body);
 
     req.session.save(() => {
-      req.session.user_id = moodData.id;
+      req.session.user_id = activityData.id;
       req.session.logged_in = true;
 
-      res.status(200).json({success: true, "result": moodData});
+      res.status(200).json({success: true, "result": activityData});
     });
   } catch (err) {
     res.status(400).json(err);
   }
 });
 
-router.delete('/mood/:id', async (req, res) => {
+router.delete('/activity/:id', async (req, res) => {
   try {
-    const moodData = await Mood.destroy({
+    const activityData = await Activity.destroy({
       where: {
         id: req.params.id
         // user_id: req.session.user_id,
       },
     });
 
-    res.status(200).json(moodData);
+    res.status(200).json(activityData);
   } catch (err) {
     res.status(500).json(err);
   }

@@ -1,13 +1,13 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 // const sequelize = require('../../config/connection');
-const { Mood } = require('../../models');
+const { Sleep } = require('../../models');
 
-// The api/mood endpoint
-router.get('/mood/:id', async (req, res) => {
+// The api/sleep endpoint
+router.get('/sleep/:id', async (req, res) => {
   try {
-    const moodData = await Mood.findOne({ where: { id: req.params.id} });
-        res.status(200).json(moodData)
+    const sleepData = await Sleep.findOne({ where: { id: req.params.id} });
+        res.status(200).json(sleepData)
   }
   catch (err){
   res.status(400).json(err)
@@ -17,8 +17,8 @@ router.get('/mood/:id', async (req, res) => {
 
 router.get('/all', async (req, res) => {
   try {
-    const moodData = await Mood.findAll();
-        res.status(200).json(moodData)
+    const sleepData = await Sleep.findAll();
+        res.status(200).json(sleepData)
   }
   catch (err){
   res.status(400).json(err)
@@ -29,29 +29,29 @@ router.get('/all', async (req, res) => {
 router.post('/', async (req, res) => {
   console.log(req.body);
   try {
-    const moodData = await Mood.create(req.body);
+    const sleepData = await Sleep.create(req.body);
 
     req.session.save(() => {
-      req.session.user_id = moodData.id;
+      req.session.user_id = sleepData.id;
       req.session.logged_in = true;
 
-      res.status(200).json({success: true, "result": moodData});
+      res.status(200).json({success: true, "result": sleepData});
     });
   } catch (err) {
     res.status(400).json(err);
   }
 });
 
-router.delete('/mood/:id', async (req, res) => {
+router.delete('/sleep/:id', async (req, res) => {
   try {
-    const moodData = await Mood.destroy({
+    const sleepData = await Sleep.destroy({
       where: {
         id: req.params.id
         // user_id: req.session.user_id,
       },
     });
 
-    res.status(200).json(moodData);
+    res.status(200).json(sleepData);
   } catch (err) {
     res.status(500).json(err);
   }
