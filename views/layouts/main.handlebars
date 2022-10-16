@@ -17,12 +17,12 @@
     <h1 class="uk-heading-line uk-heading-medium uk-text-center"><span>Wellness App</span></h1>
   </header>
 
-
+ 
   <nav>
-    <a href="/">Home</a>
+     <a href="/">Home</a> |
     <!-- If the user is logged in, show a logout button -->
     {{#if logged_in}}
-    <a href="/homepage">Homepage(profile)</a>
+    <a href="/homepage">Homepage</a>
     <button id="logout" class="btn-no-style">Logout</button>
     {{else}}
     <!-- Otherwise, show a link to login -->
