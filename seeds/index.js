@@ -2,9 +2,10 @@ const sequelize = require('../config/connection');
 const User = require('../models/User');
 const userData = require('./seed.json');
 const moodData = require('./moodSeeds');
-const activityData = require('./activitySeeds')
-const sleepData = require('./sleepSeeds')
-const { Mood, Activity, Sleep } = require('../models');
+const activityData = require('./activitySeeds');
+const sleepData = require('./sleepSeeds');
+const waterData = require('./waterSeeds');
+const { Mood, Activity, Sleep, Water } = require('../models');
 
 const seedDatabase = async () => {
     await sequelize.sync ({ force: true });
@@ -29,6 +30,10 @@ const seedDatabase = async () => {
     returning: true, 
   })
 
+  await Water.bulkCreate(waterData, {
+    individualHooks: true,
+    returning: true, 
+  })
     process.exit(0);
 };
 seedDatabase();
