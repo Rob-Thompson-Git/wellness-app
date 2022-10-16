@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.10/dist/css/uikit.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.10/dist/js/uikit.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.10/dist/js/uikit-icons.min.js"></script>
+  <link rel="stylesheet" href="/css/landing.css">
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
@@ -17,12 +18,12 @@
     <h1 class="uk-heading-line uk-heading-medium uk-text-center"><span>Wellness App</span></h1>
   </header>
 
-
+ 
   <nav>
-    <a href="/">Home</a>
+     <a href="/">Home</a> |
     <!-- If the user is logged in, show a logout button -->
     {{#if logged_in}}
-    <a href="/homepage">Homepage(profile)</a>
+    <a href="/homepage">Homepage</a>
     <button id="logout" class="btn-no-style">Logout</button>
     {{else}}
     <!-- Otherwise, show a link to login -->
