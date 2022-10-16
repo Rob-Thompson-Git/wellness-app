@@ -21,6 +21,7 @@ router.get('/homepage', withAuth, async (req, res) => {
         logged_in: req.session.logged_in
     });
 
+
     //  try {
     //      const userData = await User.findByPk(req.session.user_id, {
     //          attributes: { exclude: ['password'] },
