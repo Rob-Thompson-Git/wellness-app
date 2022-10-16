@@ -21,18 +21,26 @@ router.get('/homepage', withAuth, async (req, res) => {
         logged_in: req.session.logged_in
     });
 
+
     //  try {
     //      const userData = await User.findByPk(req.session.user_id, {
     //          attributes: { exclude: ['password'] },
     //          include: [{ model: Mood }],
     //      });
 
+// <<<<<<< HEAD
+//         res.render('/homepage', {
+//             ...user,
+//             logged_in: true,
+//         });
+// =======
     //      const user = userData.get({ plain: true });
 
     //      res.render('homepage', {
     //          ...user,
     //          logged_in: true,
     //      });
+// >>>>>>> main
             
         
     //  } catch (err) {
