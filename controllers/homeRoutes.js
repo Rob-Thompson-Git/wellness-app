@@ -4,7 +4,8 @@ const withAuth = require('../utils/auth');
 
 router.get('/', (req,res) => {
     res.render('landing-page', {
-        logged_in: req.session.logged_in
+        logged_in: req.session.logged_in,
+        style: 'landing.css'
     })
 })
 
@@ -18,7 +19,8 @@ router.get('/login', (req,res) => {
 
 router.get('/homepage', withAuth, async (req, res) => {
     res.render('homepage', {
-        logged_in: req.session.logged_in
+        logged_in: req.session.logged_in,
+        style: 'style.css'
     });
 
 
