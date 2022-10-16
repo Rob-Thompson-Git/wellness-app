@@ -1,0 +1,18 @@
+[
+  {
+    "exercise": "running",
+    "effort": 10,
+    "goals": "marathon",
+  },
+  {
+    "exercise": "swimming",
+    "effort": 6,
+    "goals": "50 laps",
+  },
+{
+  "exercise": "dance",
+    "effort": 7,
+    "goals": "have fun",
+}
+
+]
