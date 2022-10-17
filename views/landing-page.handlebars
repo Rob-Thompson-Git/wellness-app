@@ -1,26 +1,52 @@
-<h1 class="uk-heading-line uk-text-center"><span>Start your wellness journey today!</span></h1>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-image {
+  background-image: url("/Assets/wellness.jpg");
+  background-color: #b6335d;
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(0, 0, 0);
+}
+</style>
+</head>
+<body>
+
+<div class="hero-image">
+  <div class="hero-text">
+    <h1 style="font: size 75px;px">Wellness App</h1>
+    <h3>Start your wellness journey today!</h3>
+  </div>
+</div>
 
 
-<div id="bg-image">
-    {{!-- <div class="uk-inline">
-        <img src="/Assets/wellness.jpg" width="1800" height="1200" alt="">
-        <div class="uk-overlay-default uk-position-cover"></div>
-        <div class="uk-overlay uk-position-bottom uk-dark">
-            <p>Start your wellness journey today!</p>
-        </div> --}}
+{{!-- <head>
+    <h1 class="uk-heading-line uk-text-center"><span>Start your wellness journey today!</span></h1> --}}
 
-        
-    </div>
-   <div class="quote-box">
-     <center> 
-            <h4 id="quote"></h4>
-            <h5 id="author"></h5>
+
+<div class="quote-box">
+        <center> 
+            <h6 id="quote"></h6>
+            <h7 id="author"></h7>
         </center>
-    </div>
-</div>
 </div>
 
-
-<script src="/js/quote.js"></script>
-    </section>
-</body>
+    <script src="/js/quote.js"></script>
+</head>
