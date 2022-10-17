@@ -4,26 +4,26 @@ const router = require('express').Router();
 const { Activity } = require('../../models');
 
 // The api/activity endpoint
-// router.get('/activity/:id', async (req, res) => {
-//   try {
-//     const activityData = await Activity.findOne({ where: { id: req.params.id} });
-//         res.status(200).json(activityData)
-//   }
-//   catch (err){
-//   res.status(400).json(err)
-//   }
-// })
+router.get('/activity/:id', async (req, res) => {
+  try {
+    const activityData = await Activity.findOne({ where: { id: req.params.id} });
+        res.status(200).json(activityData)
+  }
+  catch (err){
+  res.status(400).json(err)
+  }
+})
 
 
-// router.get('/all', async (req, res) => {
-//   try {
-//     const activityData = await Activity.findAll();
-//         res.status(200).json(activityData)
-//   }
-//   catch (err){
-//   res.status(400).json(err)
-//   }
-// })
+router.get('/all', async (req, res) => {
+  try {
+    const activityData = await Activity.findAll();
+        res.status(200).json(activityData)
+  }
+  catch (err){
+  res.status(400).json(err)
+  }
+})
 
 
 router.post('/', async (req, res) => {
