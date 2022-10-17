@@ -4,7 +4,8 @@ const newFormHandler = async (event) => {
   const sleep = document.querySelector('#sleep').value.trim();
 
   if (sleep) {
-    const response = await fetch(`/api/user`, {
+    const response = await fetch(`/api/sleep`, {
+      // should this go to api/user or to api/sleep
       method: 'POST',
       body: JSON.stringify({sleep}),
       headers: {
@@ -13,33 +14,33 @@ const newFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/profile');
+      document.location.replace('/sleep');
     } else {
       alert('Failed to create sleep');
     }
   }
 };
 
-const delButtonHandler = async (event) => {
-  if (event.target.hasAttribute('data-id')) {
-    const id = event.target.getAttribute('data-id');
+// const delButtonHandler = async (event) => {
+//   if (event.target.hasAttribute('data-id')) {
+//     const id = event.target.getAttribute('data-id');
 
-    const response = await fetch(`/api/user/${id}`, {
-      method: 'DELETE',
-    });
+//     const response = await fetch(`/api/sleep/${id}`, {
+//       method: 'DELETE',
+//     });
 
-    if (response.ok) {
-      document.location.replace('/profile');
-    } else {
-      alert('Failed to delete project');
-    }
-  }
-};
+//     if (response.ok) {
+//       document.location.replace('/profile');
+//     } else {
+//       alert('Failed to delete sleep');
+//     }
+//   }
+// };
 
 document
-  .querySelector('.new-user-form')
+  .querySelector('.sleep-form')
   .addEventListener('input', newFormHandler);
 
-document
-  .querySelector('.wellness')
-  .addEventListener('click', delButtonHandler);
+// document - this is for delete - would need to add {{if}} to hb
+//   .querySelector('.wellness')
+//   .addEventListener('click', delButtonHandler);

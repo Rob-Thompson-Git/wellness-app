@@ -24,9 +24,9 @@ router.get('/homepage', withAuth, async (req, res) => {
         layout: 'main' // this is the default
     });
 
-    router.get('/sleep/:id', async (req, res) => {
+   router.get('/sleep/:id', async (req, res) => {
       try {
-        const sleepData = await Project.findByPk(req.params.id, {
+        const sleepData = await Sleep.findByPk(req.params.id, {
           include: [
             {
               model: User,
@@ -35,11 +35,11 @@ router.get('/homepage', withAuth, async (req, res) => {
           ],
         });
     
-        const project = sleepData.get({ plain: true });
+        const sleep = sleepData.get({ plain: true });
     
         res.render('sleep', {
-          ...project,
-          logged_in: req.session.logged_in
+          ...sleep,
+          logged_in: req.session.logged_in 
         });
       } catch (err) {
         res.status(500).json(err);
