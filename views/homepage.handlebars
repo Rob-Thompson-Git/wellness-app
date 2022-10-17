@@ -16,11 +16,11 @@
         <h5 id="author"></h5>
     </center>
 </div>
-<script src="/js/quote.js"></script>
 
 
 
 <section class="cards">
+      <form class="activity-form">
     <div class="uk-height-large">
         <div class="uk-child-width-1-4@s" uk-grid>
             <div>
@@ -28,7 +28,7 @@
                     id="activity-card" uk-sticky="start: 200; end: !.uk-height-large; offset: 80">Did you drink water
                     today?</div>
                 <div class="uk-margin">
-                    <input class="uk-input uk-form-width-large" type="text" placeholder="How many ounces?">
+                    <input class="uk-input uk-form-width-large" type="text" placeholder="How many ounces?" id="water-input">
                 </div>
                 {{!-- <label class="uk-form-label" for="form-horizontal-select"> </label>
                 <div class="uk-form-controls">
@@ -40,44 +40,57 @@
                     </select>
                 </div> --}}
             </div>
-            <div>
+             <form class="activity-form">
                 <div class="uk-card uk-card-default uk-card-body uk-text-center uk-position-z-index" id="card"
                     uk-sticky="start: 100%; end: !.uk-height-large; offset: 80">Did you sleep well?</div>
                 <div class="uk-margin">
-                    <input class="uk-input uk-form-width-large" type="text" placeholder="How many hours?">
+                    <input class="uk-input uk-form-width-large" type="text" placeholder="How many hours?" id="sleep-input">
                 </div>
 
-            </div>
-            <form>
+            </form>
+          
+            <form class="activity-form">
                 <div class="uk-card uk-card-default uk-card-body uk-text-center uk-position-z-index" id="card"
-                    uk-sticky="start: 20vh; end: !.uk-height-large; offset: 80">How are you feeling?</div>
+                    uk-sticky="start: 100%; end: !.uk-height-large; offset: 80">Did you sleep well?</div>
                 <div class="uk-margin">
-                    <input class="uk-input uk-form-width-large" type="text" placeholder="What's your mood overall?" >
+                    <input class="uk-input uk-form-width-large" type="text" placeholder="How many hours?" id="mood-input">
                 </div>
-        </form>
 
-        <form class="activity-form">
-        <div>
-            <div class="uk-card uk-card-default uk-card-body uk-text-center uk-position-z-index" id="card"
-                uk-sticky="start: !.uk-height-large; end: !.uk-height-large + div; offset: 80">Were you active today?
-            </div>
-            <div class="uk-margin">
-                <input class="uk-input uk-form-width-large" type="text" placeholder="What type of exercise did you do?" id="activity-input">
-                <div class="col-md-4">
-                    <button type="submit" class="btn btn-primary">Create</button>
+            </form>
+          
+
+          
+                <div>
+                    <div class="uk-card uk-card-default uk-card-body uk-text-center uk-position-z-index" id="card"
+                        uk-sticky="start: uk-height-large; end: uk-height-large + div; offset: 80">Were you active
+                        today?
+                    </div>
+                    <div class="uk-margin">
+                        <input class="uk-input uk-form-width-large" type="text"
+                            placeholder="What type of exercise did you do?" id="activity-input">
+                        <div class="col-md-4">
+                            <button type="submit" class="btn btn-primary">Create</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
+           
         </div>
-        </form>
-    </div>
     </div>
     <div style="height: 200px"></div>
 
-    <script src="/js/profile.js"></script>
-    <script src="/js/activity.js"></script>
     </div>
+     </form>
 </section>
 
+<ul id="list_of_activities">
+
+</ul>
+
+
+<script src="/js/activity.js"></script>
+<script src="/js/profile.js"></script>
+
+<script src="/js/quote.js"></script>
 
 
 {{!-- <label class="uk-form-label" for="form-horizontal-select">Select</label>

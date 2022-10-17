@@ -15,16 +15,19 @@ const { Activity } = require('../../models');
 // })
 
 
-// router.get('/all', async (req, res) => {
-//   try {
-//     const activityData = await Activity.findAll();
-//         res.status(200).json(activityData)
-//   }
-//   catch (err){
-//   res.status(400).json(err)
-//   }
-// })
-
+router.get('/', async (req, res) => {
+  try {
+    const activityData = await Activity.findAll({
+      where:{
+        user_id: req.session.user_id
+      }
+    });
+        res.status(200).json(activityData)
+  }
+  catch (err){
+  res.status(400).json(err)
+  }
+})
 
 router.post('/', async (req, res) => {
   console.log(req.body);

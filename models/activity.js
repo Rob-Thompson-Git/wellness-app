@@ -22,6 +22,18 @@ class Activity extends Model {}
           key: 'id',
         },
       },
+      mood_overall: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      hours: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+      },
+      waterConsumed: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+      },
     },
     {
       sequelize,
