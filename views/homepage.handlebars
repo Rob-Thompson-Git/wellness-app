@@ -4,73 +4,86 @@
 {{!-- to do list to be put INSIDE card? --}}
 
 <div class="container-dt">
-        <div class="datetime">
+    <div class="datetime">
         <div id="time"></div>
-         <div id="date"></div>
-         </div>
- </div>
+        <div id="date"></div>
+    </div>
+</div>
 
- <div class="quote-box">
-        <center> 
-            <h4 id="quote"></h4>
-            <h5 id="author"></h5>
-        </center>
- </div>
+<div class="quote-box">
+    <center>
+        <h4 id="quote"></h4>
+        <h5 id="author"></h5>
+    </center>
+</div>
 <script src="/js/quote.js"></script>
 
 
 
 <section class="cards">
     <div class="uk-height-large">
-    <div class="uk-child-width-1-4@s" uk-grid>
-        <div>
-            <div class="uk-card uk-card-default uk-card-body uk-text-center uk-position-z-index" id="card" uk-sticky="start: 200; end: !.uk-height-large; offset: 80">Did you drink water today?</div>
-            <div class="uk-margin">
-        <input class="uk-input uk-form-width-large" type="text" placeholder="How many ounces?">
-    </div>
-        {{!-- <label class="uk-form-label" for="form-horizontal-select"> </label>
-        <div class="uk-form-controls">
-            <select class="uk-select" id="form-horizontal-select">
-                <option>Choose an Option</option>
-                <option>Option 01</option>
-                <option>Option 02</option>
-                <option>Option 02</option>
-            </select>
-        </div> --}}
-        </div>
-        <div>
-            <div class="uk-card uk-card-default uk-card-body uk-text-center uk-position-z-index" id="card" uk-sticky="start: 100%; end: !.uk-height-large; offset: 80">Did you sleep well?</div>
-           <div class="uk-margin">
-        <input class="uk-input uk-form-width-large" type="text" placeholder="How many hours?">
-    </div>
-            
-        </div>
-        <div>
-            <div class="uk-card uk-card-default uk-card-body uk-text-center uk-position-z-index" id="card" uk-sticky="start: 20vh; end: !.uk-height-large; offset: 80">How are you feeling?</div>
-            <div class="uk-margin">
-        <input class="uk-input uk-form-width-large" type="text" placeholder="What's your mood overall?">
-    </div>
-        </div>
-        <div>
-            <div class="uk-card uk-card-default uk-card-body uk-text-center uk-position-z-index" id="card" uk-sticky="start: !.uk-height-large; end: !.uk-height-large + div; offset: 80">Were you active today?</div>
-            <div class="uk-margin">
-        <input class="uk-input uk-form-width-large" type="text" placeholder="What type of exercise did you do?">
-    </div>
-        </div>
-    </div>
-</div>
-<div style="height: 200px"></div>
+        <div class="uk-child-width-1-4@s" uk-grid>
+            <div>
+                <div class="uk-card activity-card uk-card-default uk-card-body uk-text-center uk-position-z-index"
+                    id="activity-card" uk-sticky="start: 200; end: !.uk-height-large; offset: 80">Did you drink water
+                    today?</div>
+                <div class="uk-margin">
+                    <input class="uk-input uk-form-width-large" type="text" placeholder="How many ounces?">
+                </div>
+                {{!-- <label class="uk-form-label" for="form-horizontal-select"> </label>
+                <div class="uk-form-controls">
+                    <select class="uk-select" id="form-horizontal-select">
+                        <option>Choose an Option</option>
+                        <option>Option 01</option>
+                        <option>Option 02</option>
+                        <option>Option 02</option>
+                    </select>
+                </div> --}}
+            </div>
+            <div>
+                <div class="uk-card uk-card-default uk-card-body uk-text-center uk-position-z-index" id="card"
+                    uk-sticky="start: 100%; end: !.uk-height-large; offset: 80">Did you sleep well?</div>
+                <div class="uk-margin">
+                    <input class="uk-input uk-form-width-large" type="text" placeholder="How many hours?">
+                </div>
 
-<script src="./js/profile.js"></script>
-</div>
+            </div>
+            <form>
+                <div class="uk-card uk-card-default uk-card-body uk-text-center uk-position-z-index" id="card"
+                    uk-sticky="start: 20vh; end: !.uk-height-large; offset: 80">How are you feeling?</div>
+                <div class="uk-margin">
+                    <input class="uk-input uk-form-width-large" type="text" placeholder="What's your mood overall?" >
+                </div>
+        </form>
+
+        <form class="activity-form">
+        <div>
+            <div class="uk-card uk-card-default uk-card-body uk-text-center uk-position-z-index" id="card"
+                uk-sticky="start: !.uk-height-large; end: !.uk-height-large + div; offset: 80">Were you active today?
+            </div>
+            <div class="uk-margin">
+                <input class="uk-input uk-form-width-large" type="text" placeholder="What type of exercise did you do?" id="activity-input">
+                <div class="col-md-4">
+                    <button type="submit" class="btn btn-primary">Create</button>
+                </div>
+            </div>
+        </div>
+        </form>
+    </div>
+    </div>
+    <div style="height: 200px"></div>
+
+    <script src="/js/profile.js"></script>
+    <script src="/js/activity.js"></script>
+    </div>
 </section>
 
 
 
 {{!-- <label class="uk-form-label" for="form-horizontal-select">Select</label>
-        <div class="uk-form-controls">
-            <select class="uk-select" id="form-horizontal-select">
-                <option>Option 01</option>
-                <option>Option 02</option>
-            </select>
-        </div> --}}
+<div class="uk-form-controls">
+    <select class="uk-select" id="form-horizontal-select">
+        <option>Option 01</option>
+        <option>Option 02</option>
+    </select>
+</div> --}}

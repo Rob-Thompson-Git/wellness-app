@@ -15,16 +15,13 @@ class Activity extends Model {}
         type: DataTypes.STRING,
         allowNull: false,
       },
-      effort: {
+      user_id: {
         type: DataTypes.INTEGER,
-        allowNull: false,
+        references: {
+          model: 'user',
+          key: 'id',
+        },
       },
-
-      goals:
-      {
-        type: DataTypes.STRING,
-        allowNull: true,
-      }
     },
     {
       sequelize,
