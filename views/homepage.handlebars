@@ -22,7 +22,7 @@
     <div class="uk-height-large">
     <div class="uk-child-width-1-4@s" uk-grid>
         <div>
-            <div class="uk-card uk-card-default uk-card-body uk-text-center uk-position-z-index" id="card" uk-sticky="start: 200; end: !.uk-height-large; offset: 80">Did you drink water today?</div>
+            <div class="uk-card activity-card uk-card-default uk-card-body uk-text-center uk-position-z-index" id="activity-card" uk-sticky="start: 200; end: !.uk-height-large; offset: 80">Did you drink water today?</div>
             <div class="uk-margin">
         <input class="uk-input uk-form-width-large" type="text" placeholder="How many ounces?">
     </div>
@@ -53,6 +53,9 @@
             <div class="uk-card uk-card-default uk-card-body uk-text-center uk-position-z-index" id="card" uk-sticky="start: !.uk-height-large; end: !.uk-height-large + div; offset: 80">Were you active today?</div>
             <div class="uk-margin">
         <input class="uk-input uk-form-width-large" type="text" placeholder="What type of exercise did you do?">
+         <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{activity.id}}">DELETE</button>
+      </div>
     </div>
         </div>
     </div>

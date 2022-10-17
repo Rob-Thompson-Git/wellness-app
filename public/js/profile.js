@@ -3,19 +3,19 @@ const newFormHandler = async (event) => {
 
   const sleep = document.querySelector('#sleep').value.trim();
   const mood = document.querySelector('#mood').value.trim();
-  const activity = document.querySelector('#activity').value.trim();
+  const activity = document.querySelector('#exercise').value.trim();
 
-  if (sleep && mood && activity) {
-    const response = await fetch(`/api/user`, {
+  if (activity) {
+    const response = await fetch(`/api/activity`, {
       method: 'POST',
-      body: JSON.stringify({sleep, mood, activity }),
+      body: JSON.stringify({activity }),
       headers: {
         'Content-Type': 'application/json',
       },
     });
 
     if (response.ok) {
-      document.location.replace('/profile');
+      document.location.replace('/homepage');
     } else {
       alert('Failed to create project');
     }
@@ -39,7 +39,7 @@ const delButtonHandler = async (event) => {
 };
 
 document
-  .querySelector('.new-user-form')
+  .querySelector('.activity-card')
   .addEventListener('submit', newFormHandler);
 
 document
