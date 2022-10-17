@@ -22,7 +22,8 @@ router.get('/', async (req, res) => {
         user_id: req.session.user_id
       }
     });
-        res.status(200).json(activityData)
+    const activities = activityData.map(act => act.get({plain:true}))
+        res.status(200).json(activities)
   }
   catch (err){
   res.status(400).json(err)
