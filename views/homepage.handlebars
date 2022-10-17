@@ -12,9 +12,10 @@
             <li>Walk puppy</li>
         </ul>
 </div> --}}
+
 <div class="datetime">
-    <div id="time">10:00 AM</div>
-    <div id="date">Thursday, June 29 2022</div>
+    <div id="time"></div>
+    <div id="date"></div>
 </div>
 {{!-- models/questions/water intake/sleep etc EXAMPLE BUT NEED TO SWITCH TO CARD --}}
 
@@ -29,12 +30,17 @@
 
 <script src="/js/quote.js"></script>
 
+
+
 <div class="uk-background-muted uk-height-large">
 
     <div class="uk-child-width-1-4@s" uk-grid>
         <div>
             <div class="uk-card uk-card-default uk-card-body uk-text-center uk-position-z-index" id="card" uk-sticky="start: 200; end: !.uk-height-large; offset: 80">Did you drink water today?</div>
-        <label class="uk-form-label" for="form-horizontal-select">Select</label>
+            <div class="uk-margin">
+        <input class="uk-input uk-form-width-large" type="text" placeholder="How many ounces?">
+    </div>
+        {{!-- <label class="uk-form-label" for="form-horizontal-select"> </label>
         <div class="uk-form-controls">
             <select class="uk-select" id="form-horizontal-select">
                 <option>Choose an Option</option>
@@ -42,44 +48,26 @@
                 <option>Option 02</option>
                 <option>Option 02</option>
             </select>
-        </div>
+        </div> --}}
         </div>
         <div>
             <div class="uk-card uk-card-default uk-card-body uk-text-center uk-position-z-index" id="card" uk-sticky="start: 100%; end: !.uk-height-large; offset: 80">Did you sleep well?</div>
-            <label class="uk-form-label" for="form-horizontal-select">Select</label>
-        <div class="uk-form-controls">
-            <select class="uk-select" id="form-horizontal-select">
-                <option>Choose an Option</option>
-                <option>Poor</option>
-                <option>Weird Dreams</option>
-                <option>Like a Baby!</option>
-            </select>
-        </div>
+           <div class="uk-margin">
+        <input class="uk-input uk-form-width-large" type="text" placeholder="How many hours?">
+    </div>
             
         </div>
         <div>
             <div class="uk-card uk-card-default uk-card-body uk-text-center uk-position-z-index" id="card" uk-sticky="start: 20vh; end: !.uk-height-large; offset: 80">How are you feeling?</div>
-            <label class="uk-form-label" for="form-horizontal-select">Select</label>
-        <div class="uk-form-controls">
-            <select class="uk-select" id="form-horizontal-select">
-                <option>Choose an Option</option>
-                <option>Great!</option>
-                <option>Meh</option>
-                <option>Not goood.</option>
-            </select>
-        </div>
+            <div class="uk-margin">
+        <input class="uk-input uk-form-width-large" type="text" placeholder="What's your mood overall?">
+    </div>
         </div>
         <div>
             <div class="uk-card uk-card-default uk-card-body uk-text-center uk-position-z-index" id="card" uk-sticky="start: !.uk-height-large; end: !.uk-height-large + div; offset: 80">Were you active today?</div>
-            <label class="uk-form-label" for="form-horizontal-select">Select</label>
-        <div class="uk-form-controls">
-            <select class="uk-select" id="form-horizontal-select">
-                <option>Choose an Option</option>
-                <option>Option 01</option>
-                <option>Option 02</option>
-                <option>Option 02</option>
-            </select>
-        </div>
+            <div class="uk-margin">
+        <input class="uk-input uk-form-width-large" type="text" placeholder="What type of exercise did you do?">
+    </div>
         </div>
     </div>
 </div>
