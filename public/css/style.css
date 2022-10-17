@@ -1,18 +1,19 @@
 .landing-container {
-  background-color: purple;
+  /* background-image: url(/public/images/cloudbg.jpeg); */
+  height: 100vh;
 }
 
 .container-dt {
-  background-color: aquamarine;
-  font-size: large;
+  background-image: transparent;
+  font-size: x-large;
 }
 
 .cards {
-  background-color: blueviolet;
+  background-color: transparent;
 }
 
 .quote-box {
-  background-color: rgb(0, 255, 38);
+  background-color: transparent;
 }
 
 h4,h5 {
@@ -20,15 +21,9 @@ h4,h5 {
 }
 
 .homepage-card {
-  background-color: rgb(255, 209, 5);
+  background-color: transparent;
 }
 
 .landing-qb {
-  background-color: rgb(225, 15, 233);
-  text-decoration: underline;
+  background-color: transparent;
 }
-
-/* .hero-image {
-  background: url('/Assets/wellness.jpg') no-repeat center top;
-  background-size: cover;
-	} */
