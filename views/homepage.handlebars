@@ -1,41 +1,25 @@
 {{!-- profile with all questions --}}
 {{!-- thinking of using marker or off-canvas uikit? --}}
 {{!-- questions to ask: Do we need a local storage for to-do list? --}}
-
-
 {{!-- to do list to be put INSIDE card? --}}
 
-{{!-- <div>
-        <ul class="uk-list uk-list-large uk-list-disc">
-            <li>Workout 7am</li>
-            <li>Lunch at noon</li>
-            <li>Walk puppy</li>
-        </ul>
-</div> --}}
+<div class="container-dt">
+        <div class="datetime">
+        <div id="time"></div>
+         <div id="date"></div>
+         </div>
+ </div>
 
-<div class="datetime">
-    <div id="time"></div>
-    <div id="date"></div>
-</div>
-{{!-- models/questions/water intake/sleep etc EXAMPLE BUT NEED TO SWITCH TO CARD --}}
-
-    </div>
-    <div class="quote-box">
+ <div class="quote-box">
         <center> 
             <h4 id="quote"></h4>
             <h5 id="author"></h5>
         </center>
-    </div>
-</div>
-</div>
-
-
+ </div>
 <script src="/js/quote.js"></script>
 
-
-
-<div class="uk-background-muted uk-height-large">
-
+<section class="cards">
+    <div class="uk-height-large">
     <div class="uk-child-width-1-4@s" uk-grid>
         <div>
             <div class="uk-card uk-card-default uk-card-body uk-text-center uk-position-z-index" id="card" uk-sticky="start: 200; end: !.uk-height-large; offset: 80">Did you drink water today?</div>
@@ -76,6 +60,8 @@
 <div style="height: 200px"></div>
 
 <script src="./js/profile.js"></script>
+</div>
+</section>
 
 
 
