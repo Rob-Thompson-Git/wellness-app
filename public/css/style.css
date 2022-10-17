@@ -27,3 +27,8 @@ h4,h5 {
 .landing-qb {
   background-color: transparent;
 }
+
+body {
+  background-image: url("/images/cloudbg.jpeg");
+  height: 100vh;
+}
