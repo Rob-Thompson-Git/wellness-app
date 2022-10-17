@@ -23,6 +23,27 @@ router.get('/homepage', withAuth, async (req, res) => {
         style: 'style.css'
     });
 
+    router.get('/sleep/:id', async (req, res) => {
+      try {
+        const sleepData = await Project.findByPk(req.params.id, {
+          include: [
+            {
+              model: User,
+              attributes: ['name'],
+            },
+          ],
+        });
+    
+        const project = sleepData.get({ plain: true });
+    
+        res.render('sleep', {
+          ...project,
+          logged_in: req.session.logged_in
+        });
+      } catch (err) {
+        res.status(500).json(err);
+      }
+    });
 
     //  try {
     //      const userData = await User.findByPk(req.session.user_id, {
