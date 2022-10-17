@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
 
 router.get('/login', (req,res) => {
     if(req.session.logged_in) {
-        res.redirect('/homepage', {layout: 'main'});
+        res.redirect('/homepage');
         return;
     }
     res.render('login-page');

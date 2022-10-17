@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+// const { User } = require('../../models');
 // const sequelize = require('../../config/connection');
 const { Activity } = require('../../models');
 
@@ -29,12 +29,12 @@ const { Activity } = require('../../models');
 router.post('/', async (req, res) => {
   console.log(req.body);
   try {
-    const activityData = await Activity.create({
+    const newActivity = await Activity.create({
       ...req.body,
       user_id: req.session.user_id,
     });
 
-    res.status(200).json(activityData);
+    res.status(200).json(newActivity);
   } catch (err) {
     res.status(400).json(err);
   }
