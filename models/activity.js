@@ -15,16 +15,25 @@ class Activity extends Model {}
         type: DataTypes.STRING,
         allowNull: false,
       },
-      effort: {
+      user_id: {
+        type: DataTypes.INTEGER,
+        references: {
+          model: 'user',
+          key: 'id',
+        },
+      },
+      mood_overall: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      hours: {
         type: DataTypes.INTEGER,
         allowNull: false,
       },
-
-      goals:
-      {
-        type: DataTypes.STRING,
-        allowNull: true,
-      }
+      waterConsumed: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+      },
     },
     {
       sequelize,
