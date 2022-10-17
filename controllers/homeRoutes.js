@@ -5,13 +5,13 @@ const withAuth = require('../utils/auth');
 router.get('/', (req, res) => {
     res.render('landing-page', {
         logged_in: req.session.logged_in,
-        style: 'landing.css'
+        layout: 'no-header' // telling hndlbars t
     })
 })
 
-router.get('/login', (req, res) => {
-    if (req.session.logged_in) {
-        res.redirect('/homepage');
+router.get('/login', (req,res) => {
+    if(req.session.logged_in) {
+        res.redirect('/homepage', {layout: 'main'});
         return;
     }
     res.render('login-page');
@@ -20,7 +20,8 @@ router.get('/login', (req, res) => {
 router.get('/homepage', withAuth, async (req, res) => {
     res.render('homepage', {
         logged_in: req.session.logged_in,
-        style: 'style.css'
+        style: 'style.css',
+        layout: 'main' // this is the default
     });
 
 // router.get('/profile', withAuth, async (req, res) => {
