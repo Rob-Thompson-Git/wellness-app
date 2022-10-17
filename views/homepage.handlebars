@@ -1,116 +1,101 @@
-{{!-- profile with all questions --}}
-{{!-- thinking of using marker or off-canvas uikit? --}}
-{{!-- questions to ask: Do we need a local storage for to-do list? --}}
-{{!-- to do list to be put INSIDE card? --}}
+{{! profile with all questions }}
+{{! thinking of using marker or off-canvas uikit? }}
+{{! questions to ask: Do we need a local storage for to-do list? }}
+{{! to do list to be put INSIDE card? }}
 
-<div class="container-dt">
-    <div class="datetime">
-        <div id="time"></div>
-        <div id="date"></div>
-    </div>
+<div class='container-dt'>
+  <div class='datetime'>
+    <div id='time'></div>
+    <div id='date'></div>
+  </div>
 </div>
 
-<div class="quote-box">
-    <center>
-        <h4 id="quote"></h4>
-        <h5 id="author"></h5>
-    </center>
+<div class='quote-box'>
+  <center>
+    <h4 id='quote'></h4>
+    <h5 id='author'></h5>
+  </center>
 </div>
 
+<section class='cards'>
+  <form class='activity-form'>
+    <div class='uk-height-large'>
 
-
-<section class="cards">
-      <form class="activity-form">
-    <div class="uk-height-large">
-
-    <div class="uk-child-width-1-4@s" uk-grid>
+      <div class='uk-child-width-1-4@s' uk-grid>
         <div>
-            <div class="uk-card uk-card-default uk-card-body uk-text-center uk-position-z-index" id="card" uk-sticky="start: 200; end: !.uk-height-large; offset: 80">Did you drink water today?</div>
-            <div class="uk-margin">
-        <input class="uk-input uk-form-width-large" type="text" placeholder="How many ounces?">
-    </div>
+          <div
+            class='uk-card uk-card-default uk-card-body uk-text-center uk-position-z-index'
+            id='card'
+            uk-sticky='start: 200; end: !.uk-height-large; offset: 80'
+          >Did you drink water today?</div>
+          <div class='uk-margin'>
+            <input
+              class='uk-input uk-form-width-large'
+              type='text'
+              placeholder='How many ounces?'
+            />
+          </div>
 
         </div>
         <div>
-            <div class="uk-card uk-card-default uk-card-body uk-text-center uk-position-z-index" id="card" uk-sticky="start: 100%; end: !.uk-height-large; offset: 80">Did you sleep well?</div>
-           <div class="uk-margin">
-        <input class="uk-input uk-form-width-large" type="text" placeholder="How many hours?">
-    </div>
-            
-        </div>
-        <div>
-            <div class="uk-card uk-card-default uk-card-body uk-text-center uk-position-z-index" id="card" uk-sticky="start: 20vh; end: !.uk-height-large; offset: 80">How are you feeling?</div>
-            <div class="uk-margin">
-        <input class="uk-input uk-form-width-large" type="text" placeholder="What's your mood overall?">
-    </div>
-        </div>
-        <div>
-            <div class="uk-card uk-card-default uk-card-body uk-text-center uk-position-z-index" id="card" uk-sticky="start: !.uk-height-large; end: !.uk-height-large + div; offset: 80">Were you active today?</div>
-            <div class="uk-margin">
-        <input class="uk-input uk-form-width-large" type="text" placeholder="What type of exercise did you do?">
-    </div>
+          <div
+            class='uk-card uk-card-default uk-card-body uk-text-center uk-position-z-index'
+            id='card'
+            uk-sticky='start: 100%; end: !.uk-height-large; offset: 80'
+          >Did you sleep well?</div>
+          <div class='uk-margin'>
+            <input
+              class='uk-input uk-form-width-large'
+              type='text'
+              placeholder='How many hours?'
+            />
+          </div>
 
-        <div class="uk-child-width-1-4@s" uk-grid>
-            <div>
-                <div class="uk-card activity-card uk-card-default uk-card-body uk-text-center uk-position-z-index"
-                    id="activity-card" uk-sticky="start: 200; end: !.uk-height-large; offset: 80">Did you drink water
-                    today?</div>
-                <div class="uk-margin">
-                    <input class="uk-input uk-form-width-large" type="text" placeholder="How many ounces?" id="water-input">
-                </div>
-               
+        </div>
+        <div>
+          <div
+            class='uk-card uk-card-default uk-card-body uk-text-center uk-position-z-index'
+            id='card'
+            uk-sticky='start: 20vh; end: !.uk-height-large; offset: 80'
+          >How are you feeling?</div>
+          <div class='uk-margin'>
+            <input
+              class='uk-input uk-form-width-large'
+              type='text'
+              placeholder="What's your mood overall?"
+            />
+          </div>
+        </div>
+        <div>
+          <div
+            class='uk-card uk-card-default uk-card-body uk-text-center uk-position-z-index'
+            id='card'
+            uk-sticky='start: !.uk-height-large; end: !.uk-height-large + div; offset: 80'
+          >Were you active today?</div>
+          <div class='uk-margin'>
+            <input
+              class='uk-input uk-form-width-large'
+              type='text'
+              placeholder='What type of exercise did you do?'
+            />
+            <div class='col-md-4'>
+              <button type='submit' class='btn btn-primary'>Awaken!</button>
             </div>
-             <form class="activity-form">
-                <div class="uk-card uk-card-default uk-card-body uk-text-center uk-position-z-index" id="card"
-                    uk-sticky="start: 100%; end: !.uk-height-large; offset: 80">Did you sleep well?</div>
-                <div class="uk-margin">
-                    <input class="uk-input uk-form-width-large" type="text" placeholder="How many hours?" id="sleep-input">
-                </div>
+          </div>
 
-            </form>
-          
-            <form class="activity-form">
-                <div class="uk-card uk-card-default uk-card-body uk-text-center uk-position-z-index" id="card"
-                    uk-sticky="start: 100%; end: !.uk-height-large; offset: 80">Did you sleep well?</div>
-                <div class="uk-margin">
-                    <input class="uk-input uk-form-width-large" type="text" placeholder="How many hours?" id="mood-input">
-                </div>
-
-            </form>
-          
-
-          
-                <div>
-                    <div class="uk-card uk-card-default uk-card-body uk-text-center uk-position-z-index" id="card"
-                        uk-sticky="start: uk-height-large; end: uk-height-large + div; offset: 80">Were you active
-                        today?
-                    </div>
-                    <div class="uk-margin">
-                        <input class="uk-input uk-form-width-large" type="text"
-                            placeholder="What type of exercise did you do?" id="activity-input">
-                        <div class="col-md-4">
-                            <button type="submit" class="btn btn-primary">Create</button>
-                        </div>
-                    </div>
-                </div>
-           
         </div>
-    </div>
-    <div style="height: 200px"></div>
+      </div>
+      <div style='height: 200px'></div>
 
     </div>
-     </form>
+  </form>
 </section>
 
-
-<ul id="list_of_activities">
+<ul id='list_of_activities'>
 
 </ul>
 
+<script src='/js/activity.js'></script>
+<script src='/js/profile.js'></script>
 
-<script src="/js/activity.js"></script>
-<script src="/js/profile.js"></script>
-
-<script src="/js/quote.js"></script>
-
-
+<script src='/js/quote.js'></script>
