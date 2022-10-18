@@ -1,3 +1,5 @@
+// This code was left in for future development. We hope to be able to link tables and refer to user input to offer suggestions for goals.
+
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
