@@ -1,3 +1,4 @@
+// This code was left in for future development. We hope to be able to link tables and refer to user input to offer suggestions for goals.
 const router = require('express').Router();
 const { User } = require('../../models');
 // const sequelize = require('../../config/connection');

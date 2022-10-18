@@ -32,3 +32,9 @@ body {
   background-image: url("/images/cloudbg.jpeg");
   height: 100vh;
 }
+
+.icon::before {
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}

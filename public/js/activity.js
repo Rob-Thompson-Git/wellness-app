@@ -4,7 +4,7 @@ const newFormHandler = async (event) => {
     alert("working")
 
     const exercise = document.querySelector('#activity-input').value.trim();
-    const waterConsumed = document.querySelector('#water-input').value.trim();
+    const waterConsumed = document.querySelector('#water-input' + "ounces of water").value.trim();
     const mood_overall = document.querySelector('#mood-input').value.trim();
     const hours = document.querySelector('#sleep-input').value.trim();
   
