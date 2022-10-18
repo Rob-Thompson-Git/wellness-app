@@ -1,5 +1,7 @@
 
 <div class='container-dt uk-flex-small uk-flex-center uk-card-default'>
+
+
   <div class='datetime'>
     <div id='time'></div>
     <div id='date'></div>
@@ -13,7 +15,7 @@
   </center>
 </div>
 
-<section class='cards'>
+<section class='cards uk-padding'>
   <form class='activity-form'>
     <div class='uk-height-large'>
 
@@ -23,8 +25,10 @@
             class='uk-card uk-card-default uk-card-body uk-text-center uk-position-z-index uk-border-rounded uk-box-shadow-large'
             id='card'
             uk-sticky='start: 200; end: !.uk-height-large; offset: 80'
-          >Did you drink water today?
-          <i class="fa-solid fa-glass-water"></i></div>
+          ><ul>
+            <li>Did you drink water today?</li> 
+          <li><i class="fa-solid fa-glass-water fa-lg"></i></li>
+          </ul></div>
           
           <div class='uk-margin'>
               
@@ -43,8 +47,10 @@
             class='uk-card uk-card-default uk-card-body uk-text-center uk-position-z-index uk-border-rounded uk-box-shadow-large'
             id='card'
             uk-sticky='start: 100%; end: !.uk-height-large; offset: 80'
-          >Did you sleep well?
-          <i class="fa-solid fa-bed"></i>
+          ><ul>
+            <li>Did you sleep well?</li>
+          <li><i class="fa-solid fa-bed fa-lg"></i></li>
+          </ul>
        </div>
           <div class='uk-margin'>
             <input
@@ -61,8 +67,10 @@
             class='uk-card uk-card-default uk-card-body uk-text-center uk-position-z-index uk-border-rounded uk-box-shadow-large'
             id='card'
             uk-sticky='start: 20vh; end: !.uk-height-large; offset: 80'
-          >How are you feeling?
-         <i class="fa-regular fa-face-meh-blank"></i>
+          ><ul>
+            <li>How are you feeling?</li>
+         <li><i class="fa-regular fa-face-meh-blank fa-lg"></i></li>
+         </ul>
           </div>
           <div class='uk-margin'>
             <input
@@ -78,8 +86,10 @@
             class='uk-card uk-card-default uk-card-body uk-text-center uk-position-z-index uk-border-rounded uk-box-shadow-large'
             id='card'
             uk-sticky='start: !.uk-height-large; end: !.uk-height-large + div; offset: 80'
-          >Were you active today?
-          <i class="fa-solid fa-person-walking"></i></div>
+          >
+          <ul><li>Were you active today?</li>
+          <li><i class="fa-solid fa-person-walking fa-lg"></i></li>
+          </ul></div>
           <div class='uk-margin'>
             <input
               class='uk-input uk-form-width-large'
@@ -114,7 +124,7 @@
       </div>
       <div style='height: 200px'></div>
 
-    </div>
+   
   </form>
   </section>
   <div>
