@@ -1,23 +1,26 @@
+@font-face {
+  font-family: 'Garet';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Garet'), url('https://fonts.cdnfonts.com/s/57477/Garet-Book.woff') format('woff');
+}
+:root {
+  --font-family: 'Garet', sans-serif;
+  --navy: navy;
+}
+
+span {
+  font-family: var(--font-family);
+}
+
 .landing-container {
   /* background-image: url(/public/images/cloudbg.jpeg); */
   height: 100vh;
 }
 
-.container-dt {
-  background-image: transparent;
-  font-size: x-large;
-}
-
 .cards {
   background-color: transparent;
-}
-
-.quote-box {
-  background-color: transparent;
-}
-
-h4,h5 {
-  font-weight: bold;
+  font-family: var(--font-family);
 }
 
 .homepage-card {
@@ -38,7 +41,6 @@ body {
   column-gap: 50px;
   justify-content: center;
   height: 30vh;
- 
 }
 
 #login-box {
@@ -82,7 +84,7 @@ box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px
   width: 430px;
 }
 
-.btn-signup-login {
+.btn-signup-login, .awaken-btn {
   background-color: black;
   color: white;
   padding: 16px 32px;
@@ -102,3 +104,56 @@ box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px
   cursor: pointer;
 }
 
+/* HOMEPAGE CSS */
+.container-dt {
+  width: 21vw;
+  border-radius: 10px;
+  margin-left: 33px;
+  margin-top: 22px;
+  font-family: var(--font-family);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  font-size: x-large;
+}
+
+#time {
+  font-style: oblique;
+  font-weight: bold;
+  margin-left: 20px;
+  color: var(--navy);
+}
+
+#date {
+  margin-left: 15px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.quote-box {
+width: 50vw;
+border-radius: 10px;
+box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+#quote {
+  font-family: var(--font-family);
+  font-style: italic;
+  margin-bottom: 5px;
+  margin-top: 38px;
+  padding-top: 19px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#author {
+  font-family: var(--font-family);
+  font-weight: bold;
+  margin-top: 0px;
+  padding-bottom: 10px;
+  
+}
+
+.quote-cont {
+  position: relative;
+  left: 470px;
+  margin-bottom: 100px; 
+}
