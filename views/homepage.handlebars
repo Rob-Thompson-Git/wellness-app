@@ -21,29 +21,35 @@
   <form class='activity-form'>
     <div class='uk-height-large'>
 
-      <div class='uk-child-width-1-4@s' uk-grid>
-        <div>
+      <div class='uk-child-width-1-4@s uk-grid'>
+        <div class="'uk-padding">
           <div
-            class='uk-card uk-card-default uk-card-body uk-text-center uk-position-z-index'
+            class='uk-card uk-card-default uk-card-body uk-text-center uk-position-z-index uk-border-rounded uk-box-shadow-large'
             id='card'
             uk-sticky='start: 200; end: !.uk-height-large; offset: 80'
-          >Did you drink water today?</div>
+          >Did you drink water today?
+          <i class="fa-solid fa-glass-water"></i></div>
+          
           <div class='uk-margin'>
+              
             <input
               class='uk-input uk-form-width-large'
               type='text'
               placeholder='How many ounces?'
               id="water-input"
             />
+            
           </div>
 
         </div>
         <div>
           <div
-            class='uk-card uk-card-default uk-card-body uk-text-center uk-position-z-index'
+            class='uk-card uk-card-default uk-card-body uk-text-center uk-position-z-index uk-border-rounded uk-box-shadow-large'
             id='card'
             uk-sticky='start: 100%; end: !.uk-height-large; offset: 80'
-          >Did you sleep well?</div>
+          >Did you sleep well?
+          <i class="fa-solid fa-bed"></i>
+       </div>
           <div class='uk-margin'>
             <input
               class='uk-input uk-form-width-large'
@@ -56,10 +62,12 @@
         </div>
         <div>
           <div
-            class='uk-card uk-card-default uk-card-body uk-text-center uk-position-z-index'
+            class='uk-card uk-card-default uk-card-body uk-text-center uk-position-z-index uk-border-rounded uk-box-shadow-large'
             id='card'
             uk-sticky='start: 20vh; end: !.uk-height-large; offset: 80'
-          >How are you feeling?</div>
+          >How are you feeling?
+         <i class="fa-regular fa-face-meh-blank"></i>
+          </div>
           <div class='uk-margin'>
             <input
               class='uk-input uk-form-width-large'
@@ -71,10 +79,11 @@
         </div>
         <div>
           <div
-            class='uk-card uk-card-default uk-card-body uk-text-center uk-position-z-index'
+            class='uk-card uk-card-default uk-card-body uk-text-center uk-position-z-index uk-border-rounded uk-box-shadow-large'
             id='card'
             uk-sticky='start: !.uk-height-large; end: !.uk-height-large + div; offset: 80'
-          >Were you active today?</div>
+          >Were you active today?
+          <i class="fa-solid fa-person-walking"></i></div>
           <div class='uk-margin'>
             <input
               class='uk-input uk-form-width-large'
@@ -82,22 +91,37 @@
               placeholder='What type of exercise did you do?'
               id="activity-input"
             />
-            <div class='col-md-4'>
-              <button type='submit' class='btn btn-primary'>Awaken!</button>
-            </div>
           </div>
+          
 
         </div>
+          <div class=" uk-align-center">
+              {{!-- <button type='submit' class='uk-button uk-button-default uk-width-1-1'>Awaken!</button> --}}
+              <a class="uk-button uk-button-default uk-width-1-1" href="#modal-sections" uk-toggle>Awaken!</a>
+              <div id="modal-sections" uk-modal>
+    <div class="uk-modal-dialog">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <div class="uk-modal-header">
+            <h2 class="uk-modal-title">Here are your wellness details!</h2>
+        </div>
+        <div class="uk-modal-body">
+             <ul class= "uk-list uk-list-divider" id='list_of_activities'>
+</ul>
+        </div>
+        <div class="uk-modal-footer uk-text-right">
+            <button class="uk-button uk-button-default uk-modal-close" type="button">Close</button>
+        </div>
+    </div>
+</div>
+            </div>
+        
       </div>
       <div style='height: 200px'></div>
 
     </div>
   </form>
-</section>
-
-<ul id='list_of_activities'>
-
-</ul>
+  </section>
+  <div>
 
 <script src='/js/activity.js'></script>
 <script src='/js/profile.js'></script>
