@@ -5,7 +5,7 @@ const withAuth = require('../utils/auth');
 router.get('/', (req, res) => {
     res.render('landing-page', {
         logged_in: req.session.logged_in,
-        layout: 'no-header' // telling hndlbars t
+        layout: 'no-header' 
     })
 })
 
@@ -14,13 +14,14 @@ router.get('/login', (req,res) => {
         res.redirect('/homepage');
         return;
     }
-    res.render('login-page');
+    res.render('login-page')
+    // {
+    // layout: "main"});
 })
 
 router.get('/homepage', withAuth, async (req, res) => {
     res.render('homepage', {
         logged_in: req.session.logged_in,
-        style: 'style.css',
         layout: 'main' // this is the default
     });
 

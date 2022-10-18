@@ -32,3 +32,43 @@ body {
   background-image: url("/images/cloudbg.jpeg");
   height: 100vh;
 }
+
+/* LOGIN PAGE */
+.uk-flex {
+  column-gap: 50px;
+  justify-content: center;
+  height: 30vh;
+ 
+}
+
+#login-box {
+width: 33vw;
+border-radius: 10px;
+box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+#signup-box {
+width: 33vw;
+border-radius: 10px;
+box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.btn-signup-login {
+  background-color: black;
+  border: 1px solid black;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+}
+
+.btn-signup-login:hover {
+  background-color: grey;
+  color: white;
+  border: 2px solid #555555;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
