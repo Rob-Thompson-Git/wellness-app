@@ -4,38 +4,38 @@
 <body>
 <section id="loginbg">
   <div class=" uk-flex">
-    <form class="form login-form uk-card-default uk-flex-middle " id="login-box">
-      <h2 class="uk-card-body">Login</h2>
-      <div class="form-group">
-        <label for="email-login">email:</label>
-        <input class="form-input uk-form" type="text" id="email-login" />
+    <form class="login-form uk-card-default uk-card-large uk-flex-center " id="login-box">
+      <h2 class="uk-card-header">Login</h2>
+      <div class="form-group uk-form-controls-login">
+        <label for="email-login form-stacked-text" class="email-label uk-form-label">email:</label>
+        <input class="form-input email-input uk-form-input uk-width-2-3" type="text" id="email-login form-stacked-text" />
+      </div>
+      <div class="form-group uk-form-controls-login">
+        <label for="password-login" class="pass-label uk-form-label">password:</label>
+        <input class="form-input uk-form-input uk-form uk-width-2-3" type="password" id="password-login form-stacked-text" />
       </div>
       <div class="form-group">
-        <label for="password-login">password:</label>
-        <input class="form-input uk-form" type="password" id="password-login" />
-      </div>
-      <div class="form-group">
-        <button class="btn-signup-login btn-primary" type="submit">login</button>
+        <button class="btn-signup-login btn-primary uk-button .uk-width-1-1 uk-card-footer" type="submit">login</button>
       </div>
     </form>
 
 
-    <form class="form signup-form uk-card-default" id="signup-box">
-      <h2 class="uk-card-body">Signup</h2>
-      <div class="form-group">
-        <label for="name-signup">name:</label>
-        <input class="form-input" type="text" id="name-signup" />
+    <form class="form signup-form uk-card-large uk-flex-center uk-card-default " id="signup-box">
+      <h2 class="uk-card-header">Signup</h2>
+      <div class="form-group uk-form-controls">
+        <label for="name-signup form-stacked-text" class="name-signup-label">name:</label>
+        <input class="form-input uk-form-input name-signup-input uk-width-2-3" type="text" id="name-signup" />
+      </div>
+      <div class="form-group uk-form-controls">
+        <label for="email-signup form-stacked-text" class="email-signup-label">email:</label>
+        <input class="form-input uk-width-2-3 email-signup-input" type="text" id="email-signup" />
+      </div>
+      <div class="form-group uk-form-controls">
+        <label for="password-signup form-stacked-text" class="pass-signup-label">password:</label>
+        <input class="form-input uk-form-input uk-width-2-3" type="password" id="password-signup" />
       </div>
       <div class="form-group">
-        <label for="email-signup">email:</label>
-        <input class="form-input" type="text" id="email-signup" />
-      </div>
-      <div class="form-group">
-        <label for="password-signup">password:</label>
-        <input class="form-input" type="password" id="password-signup" />
-      </div>
-      <div class="form-group">
-        <button class="btn-signup-login btn-primary" type="submit">signup</button>
+        <button class="btn-signup-login btn-primary uk-button uk-card-footer uk-width-1-1" type="submit">signup</button>
       </div>
     </form>
   </div>
