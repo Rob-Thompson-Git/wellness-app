@@ -15,25 +15,25 @@ const seedDatabase = async () => {
         returning: true,
     });
 
-    await Mood.bulkCreate(moodData, {
-      individualHooks: true,
-      returning: true,
-  });
+    // await Mood.bulkCreate(moodData, {
+    //   individualHooks: true,
+    //   returning: true,
+  // });
   
   await Activity.bulkCreate(activityData, {
     individualHooks: true,
     returning: true,
   });
 
-  await Sleep.bulkCreate(sleepData, {
-    individualHooks: true,
-    returning: true, 
-  });
+  // await Sleep.bulkCreate(sleepData, {
+  //   individualHooks: true,
+  //   returning: true, 
+  // });
 
-  await Water.bulkCreate(waterData, {
-    individualHooks: true,
-    returning: true, 
-  });
+  // await Water.bulkCreate(waterData, {
+  //   individualHooks: true,
+  //   returning: true, 
+  // });
     process.exit(0);
 };
 seedDatabase();
