@@ -38,3 +38,7 @@ body {
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
 }
+
+ul {
+  list-style: none
+ }
