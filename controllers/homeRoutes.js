@@ -14,9 +14,8 @@ router.get('/login', (req,res) => {
         res.redirect('/homepage');
         return;
     }
-    res.render('login-page')
-    // {
-    // layout: "main"});
+    res.render('login-page', {
+    layout: "main"});
 })
 
 router.get('/homepage', withAuth, async (req, res) => {
