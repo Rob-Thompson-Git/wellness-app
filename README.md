@@ -28,5 +28,5 @@ password: test987987 <br>
 [Yasmin Bustami](https://github.com/yazbustami)
 [Anna Kowalczyk](https://github.com/akowala)
 [Jessica Morse](https://github.com/jessicamorse23)
-[Bryce Oparah]()
-[Robert Thompson](https://github.com/Rob-Thompson-Git)git 
+[Bryce Oparah](https://github.com/BryceOph)
+[Robert Thompson](https://github.com/Rob-Thompson-Git)
