@@ -1,18 +1,7 @@
 const router = require('express').Router();
-// const { User } = require('../../models');
-// const sequelize = require('../../config/connection');
+
 const { Activity } = require('../../models');
 
-// The api/activity endpoint
-// router.get('/activity/:id', async (req, res) => {
-//   try {
-//     const activityData = await Activity.findOne({ where: { id: req.params.id} });
-//         res.status(200).json(activityData)
-//   }
-//   catch (err){
-//   res.status(400).json(err)
-//   }
-// })
 
 
 router.get('/', async (req, res) => {
