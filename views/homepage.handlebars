@@ -1,17 +1,15 @@
-{{! profile with all questions }}
-{{! thinking of using marker or off-canvas uikit? }}
-{{! questions to ask: Do we need a local storage for to-do list? }}
-{{! to do list to be put INSIDE card? }}
 
-<div class='container-dt uk-padding'>
+<div class='container-dt uk-flex-small uk-flex-center uk-card-default'>
+
+
   <div class='datetime'>
     <div id='time'></div>
     <div id='date'></div>
   </div>
 </div>
 
-<div class='quote-box'>
-  <center>
+<div class="quote-cont">
+  <center class="uk-card-default uk-flex-center quote-box">
     <h4 id='quote'></h4>
     <h5 id='author'></h5>
   </center>
@@ -108,7 +106,7 @@
               <a class="uk-button uk-button-default uk-width-1-1" href="#modal-sections" uk-toggle>Awaken!</a>
               <div id="modal-sections" uk-modal>
     <div class="uk-modal-dialog">
-        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <button class="awaken-btn uk-modal-close-default" type="button" uk-close></button>
         <div class="uk-modal-header">
             <h2 class="uk-modal-title">Here are your wellness details!</h2>
         </div>
@@ -126,7 +124,7 @@
       </div>
       <div style='height: 200px'></div>
 
-    </div>
+   
   </form>
   </section>
   <div>
