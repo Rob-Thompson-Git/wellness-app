@@ -11,6 +11,7 @@ Clone down this repository. <br>
 [Click here](https://github.com/Rob-Thompson-Git/wellness-app) to clone. <br>
 
 ## Usage
+`Heroku Live Link: https://serene-depths-46379.herokuapp.com/`
 When the application is deployed you will begin on the landing page. Should you decide to create an account, you may use the following test user options to login: <br>
 
 username: test123 <br>
